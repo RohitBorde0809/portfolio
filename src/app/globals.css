@@ -1,0 +1,868 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Modern Color Palette */
+  --background: #f8fafc;
+  --background-secondary: #ffffff;
+  --foreground: #0f172a;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --primary-glow: rgba(59, 130, 246, 0.15);
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --shadow: rgba(59, 130, 246, 0.1);
+  --accent: #6366f1;
+  --accent-foreground: #ffffff;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --glass: rgba(255, 255, 255, 0.95);
+  --glass-stroke: rgba(255, 255, 255, 0.1);
+  --glass-shine: rgba(255, 255, 255, 0.2);
+  --selection: rgba(59, 130, 246, 0.1);
+  
+  /* Cyberpunk/Neon Colors */
+  --neon-blue: #00d4ff;
+  --neon-green: #00ff88;
+  --neon-pink: #ff0080;
+  --neon-yellow: #ffff00;
+  --neon-purple: #8b00ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --background-secondary: #1e293b;
+    --foreground: #f8fafc;
+    --primary: #60a5fa;
+    --primary-foreground: #0f172a;
+    --primary-glow: rgba(96, 165, 250, 0.15);
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    --border: #334155;
+    --shadow: rgba(96, 165, 250, 0.1);
+    --accent: #818cf8;
+    --accent-foreground: #0f172a;
+    --accent-glow: rgba(129, 140, 248, 0.15);
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+    --glass: rgba(15, 23, 42, 0.95);
+    --glass-stroke: rgba(255, 255, 255, 0.03);
+    --glass-shine: rgba(255, 255, 255, 0.05);
+    --selection: rgba(96, 165, 250, 0.1);
+    
+    /* Cyberpunk/Neon Colors for dark mode */
+    --neon-blue: #00d4ff;
+    --neon-green: #00ff88;
+    --neon-pink: #ff0080;
+    --neon-yellow: #ffff00;
+    --neon-purple: #8b00ff;
+  }
+}
+
+/* IoT, ML & Mechanical Themed Animations */
+
+/* IoT Network Animations */
+@keyframes network-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes data-transmission {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  50% {
+    transform: translateX(0%) scaleX(1);
+  }
+  100% {
+    transform: translateX(100%) scaleX(0);
+  }
+}
+
+@keyframes sensor-blink {
+  0%, 90% { opacity: 1; }
+  95% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+@keyframes iot-connection {
+  0% {
+    stroke-dasharray: 0, 100;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 50, 100;
+    stroke-dashoffset: -25;
+  }
+  100% {
+    stroke-dasharray: 100, 0;
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Machine Learning Animations */
+@keyframes neural-network {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    filter: brightness(0.8);
+  }
+  33% {
+    transform: scale(1.1) rotate(120deg);
+    filter: brightness(1.2);
+  }
+  66% {
+    transform: scale(0.9) rotate(240deg);
+    filter: brightness(0.9);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    filter: brightness(1);
+  }
+}
+
+@keyframes data-processing {
+  0% { width: 0%; opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { width: 100%; opacity: 0.5; }
+}
+
+@keyframes algorithm-thinking {
+  0%, 100% {
+    transform: scale(1) rotateY(0deg);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  25% {
+    transform: scale(1.05) rotateY(90deg);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    transform: scale(1.1) rotateY(180deg);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+  }
+  75% {
+    transform: scale(1.05) rotateY(270deg);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+  }
+}
+
+@keyframes learning-curve {
+  0% {
+    transform: translateY(20px) scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Mechanical & Engineering Animations */
+@keyframes gear-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mechanical-slide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes hydraulic-pump {
+  0%, 100% {
+    transform: scaleY(1) translateY(0);
+  }
+  25% {
+    transform: scaleY(1.2) translateY(-5px);
+  }
+  50% {
+    transform: scaleY(0.8) translateY(5px);
+  }
+  75% {
+    transform: scaleY(1.1) translateY(-2px);
+  }
+}
+
+@keyframes circuit-trace {
+  0% {
+    stroke-dasharray: 0, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -50;
+  }
+  100% {
+    stroke-dasharray: 200, 0;
+    stroke-dashoffset: -200;
+  }
+}
+
+@keyframes robotic-movement {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes assembly-line {
+  0% {
+    transform: translateX(-50px) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(50px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Additional animations for current page usage */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 8s ease infinite;
+}
+
+.animate-neon-glow {
+  animation: neon-glow 2s ease-in-out infinite;
+}
+
+.neon-text {
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 15px #00ff88;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(90deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Energy & Power Animations */
+@keyframes power-surge {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(59, 130, 246, 0.3));
+  }
+  50% {
+    filter: brightness(1.3) drop-shadow(0 0 15px rgba(59, 130, 246, 0.8));
+  }
+}
+
+@keyframes voltage-wave {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-8px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-network-pulse {
+  animation: network-pulse 2s ease-in-out infinite;
+}
+
+.animate-data-transmission {
+  animation: data-transmission 3s linear infinite;
+}
+
+.animate-sensor-blink {
+  animation: sensor-blink 1.5s ease-in-out infinite;
+}
+
+.animate-iot-connection {
+  animation: iot-connection 4s ease-in-out infinite;
+}
+
+.animate-neural-network {
+  animation: neural-network 6s ease-in-out infinite;
+}
+
+.animate-data-processing {
+  animation: data-processing 2s ease-out infinite;
+}
+
+.animate-algorithm-thinking {
+  animation: algorithm-thinking 4s ease-in-out infinite;
+}
+
+.animate-learning-curve {
+  animation: learning-curve 3s ease-in-out infinite;
+}
+
+.animate-gear-rotation {
+  animation: gear-rotation 8s linear infinite;
+}
+
+.animate-mechanical-slide {
+  animation: mechanical-slide 5s ease-in-out infinite;
+}
+
+.animate-hydraulic-pump {
+  animation: hydraulic-pump 1.2s ease-in-out infinite;
+}
+
+.animate-circuit-trace {
+  animation: circuit-trace 3s linear infinite;
+}
+
+.animate-robotic-movement {
+  animation: robotic-movement 2s ease-in-out infinite;
+}
+
+.animate-assembly-line {
+  animation: assembly-line 6s linear infinite;
+}
+
+.animate-power-surge {
+  animation: power-surge 2.5s ease-in-out infinite;
+}
+
+.animate-voltage-wave {
+  animation: voltage-wave 1s ease-in-out infinite;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply antialiased scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    background-image: 
+      radial-gradient(circle at 100% 0%, var(--primary-glow) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, var(--accent-glow) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: var(--selection);
+    @apply text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent relative;
+    background-image: linear-gradient(135deg, var(--primary), var(--accent));
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+
+  .gradient-text::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: inherit;
+    filter: blur(12px);
+    opacity: 0.15;
+    z-index: -1;
+  }
+
+  .glass-card {
+    @apply bg-glass backdrop-blur-md border relative overflow-hidden;
+    border-color: var(--glass-stroke);
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 5%,
+      var(--glass-shine) 5%,
+      var(--glass-shine) 10%,
+      transparent 10%,
+      transparent 100%
+    );
+    transform: translateX(-100%) rotate(45deg);
+    animation: glass-shine 3s ease-in-out infinite;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-1 relative bg-background-secondary;
+    box-shadow: 0 4px 6px -1px var(--shadow), 0 2px 4px -2px var(--shadow);
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow);
+  }
+
+  .card-hover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .card-hover:hover::after {
+    opacity: 1;
+  }
+
+  .button-primary {
+    @apply relative inline-flex items-center justify-center px-6 py-3 rounded-lg overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--primary-foreground);
+    box-shadow: 0 4px 6px -1px var(--shadow), 0 2px 4px -2px var(--shadow);
+  }
+
+  .button-primary:hover {
+    box-shadow: 0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow);
+    transform: translateY(-2px);
+  }
+
+  .button-primary::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: inherit;
+    filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .button-primary:hover::before {
+    opacity: 0.5;
+  }
+
+  .button-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.5s ease;
+  }
+
+  .button-primary:hover::after {
+    transform: translateX(100%) skewX(-15deg);
+  }
+
+  .nav-link {
+    @apply relative overflow-hidden;
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .section-pattern {
+    background-image: 
+      /* IoT Network Pattern */
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 80% 50%, rgba(34, 197, 94, 0.1) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+
+  /* IoT & ML Themed Background Patterns */
+  .iot-network-bg {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(34, 197, 94, 0.1) 2px, transparent 2px),
+      linear-gradient(45deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 40px 40px;
+  }
+
+  .ml-neural-bg {
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.08) 3px, transparent 3px),
+      radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.08) 2px, transparent 2px),
+      linear-gradient(30deg, rgba(168, 85, 247, 0.02) 1px, transparent 1px);
+    background-size: 120px 120px, 60px 60px, 30px 30px;
+  }
+
+  .mechanical-grid-bg {
+    background-image: 
+      linear-gradient(90deg, rgba(107, 114, 128, 0.1) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(107, 114, 128, 0.1) 1px, transparent 1px),
+      linear-gradient(45deg, rgba(107, 114, 128, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 25px 25px;
+  }
+
+  /* Project Card Animations Based on Type */
+  .iot-card {
+    animation: network-pulse 3s ease-in-out infinite;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .iot-card:hover {
+    animation: data-transmission 2s linear infinite;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  }
+
+  .ml-card {
+    animation: algorithm-thinking 4s ease-in-out infinite;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+  }
+
+  .ml-card:hover {
+    animation: neural-network 3s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+  }
+
+  .web-card {
+    animation: mechanical-slide 5s ease-in-out infinite;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .web-card:hover {
+    animation: robotic-movement 2s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+  }
+
+  .engineering-card {
+    animation: gear-rotation 8s linear infinite;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+  }
+
+  .engineering-card:hover {
+    animation: hydraulic-pump 1.5s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+  }
+}
+
+@layer utilities {
+  /* Technical Animation Utilities */
+  .animate-network-pulse {
+    animation: network-pulse 2s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  .animate-data-flow {
+    animation: data-transmission 3s linear infinite;
+    opacity: 0;
+  }
+
+  .animate-ml-process {
+    animation: algorithm-thinking 4s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  .animate-mechanical-motion {
+    animation: robotic-movement 2s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  .animate-circuit-active {
+    animation: circuit-trace 3s linear infinite;
+    opacity: 0;
+  }
+
+  .animate-sensor-active {
+    animation: sensor-blink 1.5s ease-in-out infinite;
+  }
+
+  .animate-power-flow {
+    animation: voltage-wave 1s ease-in-out infinite;
+  }
+
+  .animate-neural-thinking {
+    animation: neural-network 6s ease-in-out infinite;
+  }
+
+  .animate-data-stream {
+    animation: data-processing 2s ease-out infinite;
+  }
+
+  .animate-gear-spin {
+    animation: gear-rotation 8s linear infinite;
+  }
+
+  .animate-hydraulic {
+    animation: hydraulic-pump 1.2s ease-in-out infinite;
+  }
+
+  .animate-assembly {
+    animation: assembly-line 6s linear infinite;
+  }
+
+  /* IoT Theme Utilities */
+  .iot-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    animation: network-pulse 2s ease-in-out infinite;
+  }
+
+  .iot-connection {
+    position: relative;
+  }
+
+  .iot-connection::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.8), transparent);
+    animation: data-transmission 2s linear infinite;
+  }
+
+  /* ML Theme Utilities */
+  .ml-processing {
+    background: linear-gradient(45deg, 
+      rgba(168, 85, 247, 0.1), 
+      rgba(239, 68, 68, 0.1), 
+      rgba(34, 197, 94, 0.1));
+    background-size: 300% 300%;
+    animation: algorithm-thinking 4s ease-in-out infinite;
+  }
+
+  .neural-node {
+    position: relative;
+    border-radius: 50%;
+    animation: neural-network 3s ease-in-out infinite;
+  }
+
+  .neural-node::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: learning-curve 2s ease-in-out infinite;
+  }
+
+  /* Mechanical Theme Utilities */
+  .mechanical-part {
+    background: linear-gradient(135deg, 
+      rgba(107, 114, 128, 0.1), 
+      rgba(156, 163, 175, 0.1));
+    border: 1px solid rgba(107, 114, 128, 0.3);
+    animation: robotic-movement 3s ease-in-out infinite;
+  }
+
+  .gear-element {
+    border-radius: 15%;
+    background: conic-gradient(from 0deg, 
+      rgba(249, 115, 22, 0.8), 
+      rgba(234, 88, 12, 0.6), 
+      rgba(249, 115, 22, 0.8));
+    animation: gear-rotation 8s linear infinite;
+  }
+
+  .hydraulic-element {
+    background: linear-gradient(90deg, 
+      rgba(34, 197, 94, 0.3), 
+      rgba(34, 197, 94, 0.8), 
+      rgba(34, 197, 94, 0.3));
+    animation: hydraulic-pump 1.5s ease-in-out infinite;
+  }
+
+  /* Technology Badge Styles */
+  .tech-badge-iot {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    animation: network-pulse 3s ease-in-out infinite;
+  }
+
+  .tech-badge-ml {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(239, 68, 68, 0.2));
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    animation: algorithm-thinking 4s ease-in-out infinite;
+  }
+
+  .tech-badge-web {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.2));
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    animation: mechanical-slide 5s ease-in-out infinite;
+  }
+
+  .tech-badge-engineering {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.2));
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    animation: gear-rotation 8s linear infinite;
+  }
+
+  /* Legacy animations for backward compatibility */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes glass-shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    20%, 100% {
+      transform: translateX(200%) rotate(45deg);
+    }
+  }
+
+  .bg-300\% {
+    background-size: 300% 300%;
+  }
+}
