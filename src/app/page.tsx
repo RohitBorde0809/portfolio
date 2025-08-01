@@ -6,6 +6,15 @@ export default function Home() {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
   const [showMoreProjects, setShowMoreProjects] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -15,6 +24,8 @@ export default function Home() {
           <a href="#" className="text-2xl font-black bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent hover:scale-105 transition-transform tracking-tight">
             Rohit Borde
           </a>
+          
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             <a href="#about" className="nav-link px-4 py-2 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide">About</a>
             <a href="#education" className="nav-link px-4 py-2 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide">Education</a>
@@ -24,12 +35,77 @@ export default function Home() {
             <a href="#certifications" className="nav-link px-4 py-2 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide">Certifications</a>
             <a href="#contact" className="nav-link px-6 py-3 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-200 ml-2 font-semibold tracking-wide">Contact</a>
           </div>
-          <button className="md:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={toggleMobileMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            <svg className={`w-6 h-6 transition-transform duration-200 ${isMobileMenuOpen ? 'rotate-45' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
             </svg>
           </button>
         </nav>
+
+        {/* Mobile Navigation Menu */}
+        <div className={`md:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-black/95 backdrop-blur-xl border-b border-white/20 dark:border-black/20 shadow-lg transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+          <div className="container py-6 space-y-4">
+            <a 
+              href="#about" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide text-lg"
+            >
+              About
+            </a>
+            <a 
+              href="#education" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide text-lg"
+            >
+              Education
+            </a>
+            <a 
+              href="#experience" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide text-lg"
+            >
+              Experience
+            </a>
+            <a 
+              href="#projects" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide text-lg"
+            >
+              Projects
+            </a>
+            <a 
+              href="#skills" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide text-lg"
+            >
+              Skills
+            </a>
+            <a 
+              href="#certifications" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all duration-200 font-medium tracking-wide text-lg"
+            >
+              Certifications
+            </a>
+            <a 
+              href="#contact" 
+              onClick={closeMobileMenu}
+              className="block px-4 py-3 bg-gradient-to-r from-primary to-blue-600 text-white rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-200 font-semibold tracking-wide text-lg text-center mt-4"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
       </header>
 
       <main className="pt-20">
