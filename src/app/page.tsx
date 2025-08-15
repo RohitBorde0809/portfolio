@@ -426,7 +426,7 @@ export default function Home() {
               <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent tracking-tight">Featured Projects</h2>
               <div className="w-32 h-1.5 bg-gradient-to-r from-primary to-blue-600 mx-auto rounded-full mb-8"></div>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed tracking-wide">
-                4+ innovative projects spanning IoT, machine learning, web development, and UI/UX design
+                5+ innovative projects spanning IoT, machine learning, web development, and UI/UX design
               </p>
             </div>
             
@@ -468,6 +468,51 @@ export default function Home() {
                     <span className="px-4 py-2 bg-gradient-to-r from-green-500/10 to-emerald-500/10 text-green-600 border border-green-500/20 rounded-full text-sm font-medium">Arduino</span>
                     <span className="px-4 py-2 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 text-orange-600 border border-orange-500/20 rounded-full text-sm font-medium">Energy Monitoring</span>
                     <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 border border-purple-500/20 rounded-full text-sm font-medium">Web Development</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 hover:border-primary/30 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl hover:shadow-teal-500/10 animate-slide-in-right">
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-teal-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-teal-500 to-cyan-600 flex items-center justify-center text-white text-xl font-bold">
+                        🏥
+                      </div>
+                      <h3 className="text-2xl font-bold group-hover:text-teal-600 transition-colors">Health Chatbot</h3>
+                    </div>
+                    <a 
+                      href="https://github.com/RohitBorde0809/HealthBot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative z-20 inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-800 to-gray-700 hover:from-teal-500 hover:to-cyan-600 text-white rounded-2xl transition-all duration-300 transform hover:scale-110 shadow-lg"
+                      aria-label="View Health Chatbot project on GitHub"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
+                      </svg>
+                    </a>
+                  </div>
+                  <ul className="space-y-4 text-muted-foreground mb-8">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 mt-2 flex-shrink-0"></div>
+                      <span className="text-lg">Developed an AI-powered health chatbot using natural language processing and machine learning</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 mt-2 flex-shrink-0"></div>
+                      <span className="text-lg">Implemented symptom analysis and preliminary health recommendations based on user input</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-cyan-600 mt-2 flex-shrink-0"></div>
+                      <span className="text-lg">Created an intuitive conversational interface for better user engagement and accessibility</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="px-4 py-2 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 text-teal-600 border border-teal-500/20 rounded-full text-sm font-medium">Python</span>
+                    <span className="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-600 border border-blue-500/20 rounded-full text-sm font-medium">NLP</span>
+                    <span className="px-4 py-2 bg-gradient-to-r from-green-500/10 to-emerald-500/10 text-green-600 border border-green-500/20 rounded-full text-sm font-medium">Machine Learning</span>
+                    <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 border border-purple-500/20 rounded-full text-sm font-medium">Chatbot</span>
                   </div>
                 </div>
               </div>
@@ -557,8 +602,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <div className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 hover:border-primary/30 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10 animate-slide-in-right">
+              {/* Hidden Projects */}
+              <div className={`hidden-project ${showAllProjects ? 'block' : 'hidden'} group relative p-10 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 hover:border-indigo-500/40 transition-all duration-700 transform hover:scale-105 hover:-translate-y-4 shadow-xl hover:shadow-3xl hover:shadow-indigo-500/20`}>
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-6">
@@ -599,7 +644,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hidden Projects */}
+              
               <div className={`hidden-project ${showAllProjects ? 'block' : 'hidden'} group relative p-10 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 hover:border-indigo-500/40 transition-all duration-700 transform hover:scale-105 hover:-translate-y-4 shadow-xl hover:shadow-3xl hover:shadow-indigo-500/20`}>
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="relative z-10">
@@ -662,124 +707,224 @@ export default function Home() {
 
         {/* Skills Section */}
         <section id="skills" className="py-24 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-blue-50/50 dark:from-purple-950/20 dark:to-blue-950/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-50/50 to-red-50/50 dark:from-orange-950/20 dark:to-red-950/20"></div>
           <div className="container relative">
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Skills & Expertise</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-600 mx-auto rounded-full"></div>
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">Skills & Expertise</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="glass-card p-8 animate-slide-in-left border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Programming Languages</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-primary/5 to-blue-500/5 border border-primary/10 hover:border-primary/20 transition-all duration-200">
-                    <span className="text-lg font-medium">Python</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-primary to-blue-600 h-3 rounded-full shadow-lg" style={{width: '90%'}}></div>
+            {/* New Interactive Skills Design */}
+            <div className="max-w-7xl mx-auto">
+                             {/* Programming Languages - Simple Cards */}
+               <div className="mb-16">
+                 <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">Programming Languages</h3>
+                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🐍</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Python</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">⚡</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Java</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🗄️</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">MySQL</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🌐</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">MERN</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🐘</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">HTML</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🔗</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Data Structures & Algorithm</div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+                             {/* Libraries & Technologies - Simple Grid */}
+               <div className="mb-16">
+                 <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Libraries & Technologies</h3>
+                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🤖</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">TensorFlow</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">📊</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">scikit-learn</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">📈</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Matplotlib</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">☁️</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Cloud Computing</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🔌</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">JDBC</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-teal-500/20 to-cyan-500/20 border border-teal-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🎨</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Figma</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 border border-pink-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">🏆</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Kaggle</div>
+                     </div>
+                   </div>
+                   
+                   <div className="group">
+                     <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                       <div className="text-3xl mb-2">⚙️</div>
+                       <div className="text-sm font-semibold text-gray-800 dark:text-white">Arduino</div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+              {/* Technical Skills - Floating Cards */}
+              <div className="mb-16">
+                <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">Technical Skills</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="group relative">
+                    <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-white text-xl">⚙️</div>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white">CNC Operating</h4>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">Precision machining and computer numerical control operations</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-green-500/5 to-emerald-500/5 border border-green-500/10 hover:border-green-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">C</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full shadow-lg" style={{width: '80%'}}></div>
+                  
+                  <div className="group relative">
+                    <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center text-white text-xl">🏭</div>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white">VMC Operating</h4>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">Vertical machining center operations and programming</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-blue-500/5 to-cyan-500/5 border border-blue-500/10 hover:border-blue-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">MySQL</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-blue-500 to-cyan-600 h-3 rounded-full shadow-lg" style={{width: '85%'}}></div>
+                  
+                  <div className="group relative">
+                    <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white text-xl">🔍</div>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white">Quality Testing</h4>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">Product quality assurance and testing procedures</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-orange-500/5 to-red-500/5 border border-orange-500/10 hover:border-orange-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">HTML</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-orange-500 to-red-600 h-3 rounded-full shadow-lg" style={{width: '75%'}}></div>
+                  
+                  <div className="group relative">
+                    <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-xl">✅</div>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white">Quality Assurance</h4>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">Quality control and assurance methodologies</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-500/10 hover:border-purple-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">PHP</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full shadow-lg" style={{width: '70%'}}></div>
+                  
+                  <div className="group relative">
+                    <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl">🌐</div>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white">IoT Development</h4>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">Internet of Things system development and integration</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-indigo-500/5 to-purple-500/5 border border-indigo-500/10 hover:border-indigo-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">Data Structure</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 h-3 rounded-full shadow-lg" style={{width: '78%'}}></div>
+                  
+                  <div className="group relative">
+                    <div className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 border border-teal-500/20 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center text-white text-xl">🔌</div>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white">Arduino Programming</h4>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300">Microcontroller programming and embedded systems</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="glass-card p-8 animate-slide-in-right border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent">Libraries & Technologies</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-orange-500/5 to-red-500/5 border border-orange-500/10 hover:border-orange-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">TensorFlow</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-orange-500 to-red-600 h-3 rounded-full shadow-lg" style={{width: '85%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-blue-500/5 to-cyan-500/5 border border-blue-500/10 hover:border-blue-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">scikit-learn</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-blue-500 to-cyan-600 h-3 rounded-full shadow-lg" style={{width: '80%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-500/10 hover:border-purple-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">Matplotlib</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-600 h-3 rounded-full shadow-lg" style={{width: '75%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-green-500/5 to-emerald-500/5 border border-green-500/10 hover:border-green-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">Cloud Computing (AWS, GCP)</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-green-500 to-emerald-600 h-3 rounded-full shadow-lg" style={{width: '78%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-indigo-500/5 to-blue-500/5 border border-indigo-500/10 hover:border-indigo-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">JDBC</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-indigo-500 to-blue-600 h-3 rounded-full shadow-lg" style={{width: '76%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-pink-500/5 to-rose-500/5 border border-pink-500/10 hover:border-pink-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">Figma</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-pink-500 to-rose-600 h-3 rounded-full shadow-lg" style={{width: '82%'}}></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-violet-500/5 to-purple-500/5 border border-violet-500/10 hover:border-violet-500/20 transition-all duration-200">
-                    <span className="text-lg font-medium">Kaggle</span>
-                    <div className="w-40 bg-muted rounded-full h-3">
-                      <div className="bg-gradient-to-r from-violet-500 to-purple-600 h-3 rounded-full shadow-lg" style={{width: '80%'}}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="glass-card p-8 animate-slide-in-left border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">Technical Skills</h3>
-                <div className="flex flex-wrap gap-4">
-                  <span className="px-6 py-3 bg-gradient-to-r from-orange-500/10 to-red-500/10 text-orange-600 border border-orange-500/20 rounded-full font-medium hover:scale-105 transition-transform">CNC Operating</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-600 border border-blue-500/20 rounded-full font-medium hover:scale-105 transition-transform">VMC Operating</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 text-green-600 border border-green-500/20 rounded-full font-medium hover:scale-105 transition-transform">Quality Testing</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 border border-purple-500/20 rounded-full font-medium hover:scale-105 transition-transform">Quality Assurance</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 text-indigo-600 border border-indigo-500/20 rounded-full font-medium hover:scale-105 transition-transform">IoT Development</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 text-teal-600 border border-teal-500/20 rounded-full font-medium hover:scale-105 transition-transform">Arduino Programming</span>
-                </div>
-              </div>
-
-              <div className="glass-card p-8 animate-slide-in-right border border-white/20 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+              {/* Soft Skills - Interactive Tags */}
+              <div>
                 <h3 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">Soft Skills</h3>
-                <div className="flex flex-wrap gap-4">
-                  <span className="px-6 py-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-600 border border-blue-500/20 rounded-full font-medium hover:scale-105 transition-transform">Communication</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 text-green-600 border border-green-500/20 rounded-full font-medium hover:scale-105 transition-transform">Spreadsheet</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-orange-500/10 to-red-500/10 text-orange-600 border border-orange-500/20 rounded-full font-medium hover:scale-105 transition-transform">Problem Solving</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 border border-purple-500/20 rounded-full font-medium hover:scale-105 transition-transform">Debugging</span>
-                  <span className="px-6 py-3 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 text-indigo-600 border border-indigo-500/20 rounded-full font-medium hover:scale-105 transition-transform">Teamwork</span>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <div className="group cursor-pointer">
+                    <div className="px-8 py-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border-2 border-blue-500/20 rounded-full text-blue-600 font-semibold hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
+                      💬 Communication
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer">
+                    <div className="px-8 py-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-2 border-green-500/20 rounded-full text-green-600 font-semibold hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
+                      📊 Spreadsheet
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer">
+                    <div className="px-8 py-4 bg-gradient-to-r from-orange-500/10 to-red-500/10 border-2 border-orange-500/20 rounded-full text-orange-600 font-semibold hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
+                      🧩 Problem Solving
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer">
+                    <div className="px-8 py-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-2 border-purple-500/20 rounded-full text-purple-600 font-semibold hover:bg-purple-500 hover:text-white hover:border-purple-500 transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
+                      🐛 Debugging
+                    </div>
+                  </div>
+                  
+                  <div className="group cursor-pointer">
+                    <div className="px-8 py-4 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border-2 border-indigo-500/20 rounded-full text-indigo-600 font-semibold hover:bg-indigo-500 hover:text-white hover:border-indigo-500 transition-all duration-300 transform hover:scale-110 hover:shadow-lg">
+                      👥 Teamwork
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1360,7 +1505,7 @@ export default function Home() {
                   </span>
                 </a>
                 <a 
-                  href="/Rohit Borde Resume.docx" 
+                  href="/Rohit Borde Resume.pdf" 
                   target="_blank"
                   className="group px-12 py-5 border-2 border-primary/30 text-primary rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 font-semibold text-lg backdrop-blur-sm"
                 >
